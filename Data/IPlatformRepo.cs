@@ -6,6 +6,6 @@ namespace RedisAPI.Data
     {
         void CreatePlatform(Platform platform);
         Platform? GetPlatformById(string id);
-        IEnumerable<Platform> GetAllPlatforms();
+        IEnumerable<Platform?>? GetAllPlatforms();
     }
 }
