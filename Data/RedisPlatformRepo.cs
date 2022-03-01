@@ -48,7 +48,8 @@ namespace RedisAPI.Data
         {
             var db = _redis.GetDatabase();
 
-            var platform = db.StringGet(id);
+            // var platform = db.StringGet(id);
+            var platform = db.HashGet("PlatformHash", id);
 
             if (!string.IsNullOrEmpty(platform))
             {
